@@ -65,18 +65,35 @@ export default class MovieList extends Component {
   //     movies
   //   })
   // };
-  
+
   render() {
     // const { title,plot,price,rating,stars,fav,cart } = this.state
 
-    const { movies } = this.state;
+    //2
+    // const { movies } = this.state;
+
+    const { movies, addStars, subStars, handleFav, handleCart } = this.props;
     return (
       <>
 
         {/* <MovieCard movies={this.state} /> */}
 
-        {movies.map((movie) => <MovieCard movies={movie} addStars={this.handleInc} subStars={this.handleDec} handleFav={this.handleFav} handleCart={this.handleCart} />)}
+        {/* 2*/}
+        {/* 
+        {movies.map((movie) => <MovieCard
+          movies={movie} 
+          addStars={this.handleInc} 
+          subStars={this.handleDec} 
+          handleFav={this.handleFav} 
+          handleCart={this.handleCart} />)}
+        */}
 
+          {movies.map((movie) => <MovieCard
+            movies={movie}
+            addStars={addStars}
+            subStars={subStars}
+            handleFav={handleFav}
+            handleCart={handleCart} />)}
 
 
       </>

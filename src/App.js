@@ -56,25 +56,37 @@ export default class App extends Component {
   };
 
   handleCart = (movie) => {
-    const { movies } = this.state;
+    let { movies, cartCount } = this.state;
     const movieID = movies.indexOf(movie);
 
 
     movies[movieID].cart = !movies[movieID].cart
-
+    if (movies[movieID].cart) {
+      cartCount = cartCount + 1;
+    } else {
+      cartCount = cartCount - 1;
+    }
+    console.log(cartCount);
     this.setState({
-      movies
+      movies,
+      cartCount
     })
   };
 
 
   render() {
+    const { movies, cartCount } = this.state;
+
     return (
       <>
         {/* <h1>Movie App</h1> */}
 
-        <Navbar />
-        <MovieList />
+        <Navbar cartCount={cartCount} />
+        <MovieList movies={movies}
+          addStars={this.handleInc}
+          subStars={this.handleDec}
+          handleFav={this.handleFav}
+          handleCart={this.handleCart} />
       </>
     )
   }
