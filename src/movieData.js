@@ -1,0 +1,47 @@
+export const movieData =[
+    {
+        title: "The Avangers",
+        plot: " Supernatural powers shown in moives.",
+        price: 199,
+        rating: 8.9,
+        stars: 0,
+        fav: false,
+        cart: false,
+    },
+    {
+        title: "The Avangers1",
+        plot: " Supernatural powers shown in moives.",
+        price: 199,
+        rating: 8.9,
+        stars: 0,
+        fav: false,
+        cart: false,
+    },
+    {
+        title: "The Avangers2",
+        plot: " Supernatural powers shown in moives.",
+        price: 199,
+        rating: 8.9,
+        stars: 0,
+        fav: false,
+        cart: false,
+    },
+    {
+        title: "The Avangers3",
+        plot: " Supernatural powers shown in moives.",
+        price: 199,
+        rating: 8.9,
+        stars: 0,
+        fav: false,
+        cart: false,
+    },
+    {
+        title: "The Avangers4",
+        plot: " Supernatural powers shown in moives.",
+        price: 199,
+        rating: 8.9,
+        stars: 0,
+        fav: false,
+        cart: false,
+    }
+]
